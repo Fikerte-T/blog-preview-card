@@ -23,6 +23,7 @@
     background-color: var(--colorwhite);
     width: 90%;
     max-width: 336px;
+    height: 550px;
     place-self: center;
     display: grid;
     row-gap: 30px;
