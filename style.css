@@ -62,6 +62,10 @@
     row-gap: 15px;
 }
 
+.text-area a {
+    z-index: 1;
+}
+
 #tag {
     padding: 5px;
     width: 90px;
