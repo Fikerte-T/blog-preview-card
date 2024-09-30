@@ -1,0 +1,119 @@
+:root {
+    --coloryellow: #f4d04e;
+    --colorgray950: #111111;
+    --colorgray500: rgb(107, 107, 107);
+    --colorwhite: #fff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Figtree", sans-serif;;
+}
+
+/* a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+  } */
+  
+  /* Make images easier to work with */
+img {
+max-width: 100%;
+display: block;
+}
+
+.container {
+    background-color: var(--coloryellow);
+    height: 100vh;
+    display: grid;
+}
+
+.card {
+    background-color: var(--colorwhite);
+    max-width: 20.75rem;
+    place-self: center;
+    display: grid;
+    row-gap: 30px;
+    align-items: center;
+    padding: 20px;
+    border: 2px solid var(--colorgray950);
+    border-radius: 20px;
+    box-shadow: 6px 6px rgb(17, 17, 17);
+    position: relative;
+}
+
+img {
+    border-radius: .8rem;
+}
+
+.text-area {
+    display: grid;
+    align-items: center;
+    row-gap: 15px;
+}
+
+#tag {
+    padding: 5px;
+    width: 90px;
+    height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    background-color: var(--coloryellow);
+    font-weight: 800;
+}
+
+a {
+    text-decoration: none;
+    color: var(--colorgray950);
+}
+
+h2 {
+    font-weight: 800;
+    font-size: 21px;
+}
+
+h2 a:hover{
+    color: var(--coloryellow);
+}
+
+.clickable-card::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: rgba(107, 107, 107, 0.1); /* Light overlay effect */
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 20px;
+}
+
+.clickable-card:hover::after {
+    opacity: 1; /* Show overlay on hover */
+}
+
+p {
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.publish-date {
+    font-weight: 500;
+}
+
+.text {
+    color: var(--colorgray500);
+}
+
+#avatar {
+    display: flex;
+    align-items: center;
+}
+
+#avatar img {
+    max-width: 38px;
+}
+
+#avatar p {
+    font-weight: 800;
+    padding-left: 15px;
+}
