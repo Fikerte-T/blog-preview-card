@@ -12,6 +12,17 @@
     font-family: "Figtree", sans-serif;;
 }
 
+/* a:not([class]) {
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+  } */
+  
+  /* Make images easier to work with */
+img {
+max-width: 100%;
+display: block;
+}
+
 .container {
     background-color: var(--coloryellow);
     height: 100vh;
@@ -20,9 +31,7 @@
 
 .card {
     background-color: var(--colorwhite);
-    width: 90%;
-    max-width: 336px;
-    height: 550px;
+    max-width: 20.75rem;
     place-self: center;
     display: grid;
     row-gap: 30px;
@@ -34,36 +43,14 @@
     position: relative;
 }
 
-#clickable-card::after {
-    position: absolute;
-    inset: 0;
-    content: "";
-    background: rgba(107, 107, 107, 0.1); /* Light overlay effect */
-    opacity: 0;
-    transition: opacity 0.3s;
-    border-radius: 20px;
-}
-
-#clickable-card:hover::after {
-    opacity: 1; /* Show overlay on hover */
-}
-
-.image-container {
-    height: 190px;
-    background-image: url(./assets/images/illustration-article.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    border-radius: 10px;
+img {
+    border-radius: .8rem;
 }
 
 .text-area {
     display: grid;
     align-items: center;
     row-gap: 15px;
-}
-
-.text-area a {
-    z-index: 1;
 }
 
 #tag {
@@ -86,8 +73,22 @@ h2 {
     font-size: 21px;
 }
 
-h2:hover{
+h2 a:hover{
     color: var(--coloryellow);
+}
+
+.clickable-card::after {
+    position: absolute;
+    inset: 0;
+    content: "";
+    background: rgba(107, 107, 107, 0.1); /* Light overlay effect */
+    opacity: 0;
+    transition: opacity 0.3s;
+    border-radius: 20px;
+}
+
+.clickable-card:hover::after {
+    opacity: 1; /* Show overlay on hover */
 }
 
 p {
@@ -95,11 +96,11 @@ p {
     line-height: 24px;
 }
 
-.text-area p:nth-of-type(2) {
+.publish-date {
     font-weight: 500;
 }
 
-.text-area p:nth-of-type(3) {
+.text {
     color: var(--colorgray500);
 }
 
@@ -116,12 +117,3 @@ p {
     font-weight: 800;
     padding-left: 15px;
 }
-
-@media only screen and (min-width: 768px) {
-    .card section:nth-of-type(1) {
-        height: 175px;
-        background-size: contain;
-        border-radius: 10px;
-    }
-    
-} 
